@@ -1,0 +1,140 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+body {
+    background: rgb(87,29,105);
+    background: linear-gradient(49deg, rgba(87,29,105,1) 0%, rgba(90,24,132,1) 100%);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main .top-c {
+    width: 500px;
+    height: 230px;
+    border-radius: 20px;
+    position: relative;
+    color: white;
+    background-color: #200b32;
+    box-shadow: 0px 0px 20px 1px #00000099;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.main {
+    transition: 0.5s;
+}
+.top-c .nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0px 20px;
+}
+
+.nav .mac,
+.other {
+    margin: 10px;
+}
+
+.nav .mac {
+    display: flex;
+}
+.nav .mac p {
+    margin: 0 3px;
+    padding: 8px;
+    border-radius: 50%;
+    background-color: aliceblue;
+}
+.nav .mac p:first-child {
+    background-color: #d82a2b;
+}
+.nav .mac p:nth-child(2) {
+    background-color: #f08f3e;
+}
+.nav .mac p:last-child {
+    background-color: #59cb6b;
+}
+.other {
+    cursor: pointer;
+}
+.nav .other p {
+    margin: 4px 0;
+    width: 20px;
+    height: 2px;
+    background-color: aliceblue;
+    transition: 0.5s;
+}
+.nav .other p:last-child {
+    width: 10px;
+}
+.nav .other:hover p:last-child{
+    width: 20px;
+}
+.display {
+    margin: 14px 50px;
+    overflow: hidden;
+}
+.min-res {
+    text-align: end;
+    font-size: 20px;
+    font-weight: bold;
+    color: #f0f8ffc7;
+}
+.max-res {
+    font-size: 80px;
+    font-weight: 900;
+    height: 97px;
+}
+.grid {
+    background-color: #471167;
+    box-shadow: 0px 0px 55px 10px #00000099;
+    margin: 0 40px;
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(4 , 80px);
+    grid-template-rows: repeat(5 , 80px);
+    gap: 10px;
+    padding: 20px 0;
+    border-radius: 0 0 20px 20px ;
+}
+.grid div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    font-weight: 900;
+    color: rgb(255, 255, 255);
+    background-color: #765089;
+    box-shadow: 0px 0px 20px 1px #00000038;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.grid div:hover {
+    background-color: #765089a4;
+}
+.grid div.equal {
+    grid-column: 4;
+    border-radius: 50px;
+    background-color: #2d0742;
+}
+.grid div.equal:hover {
+    background-color: #2a033f;
+}
+div[name='AF'] {
+    background-color: #9f87a7;
+}
+div[name='AF']:hover {
+    background-color: #9f87a7b8;
+}
+
+@media (max-width:520px) {
+    .main {
+        transform: scale(0.6);
+    }
+}
